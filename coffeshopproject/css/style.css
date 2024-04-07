@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 :root{
-    --main-color:#33211D;
-    --black:#555;
-    --bg:#FFFBF2;
-    --primary:#DA9F5B;
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
     --border: 1rem solid rgba(255,255,255, .3) ;
 
 }
@@ -44,7 +43,7 @@ body{
 }
 
 .header{
-    background: var(--black);
+    background: var(--bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -82,3 +81,69 @@ body{
 .header .icons div:hover{
     color: var(--main-color);
 }
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem ;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+.header .search-form label:hover{
+    color:var(--main-color);
+}
+
+.header .cart-items-container{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    height:calc(100vh - 9.5rem);
+    width: 35rem;
+    background: #fff;
+    padding:  0 1.5rem;
+}
+
+.header .cart-items-container .cart-item{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.header .cart-items-container .cart-item .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black);
+}
+.header .cart-items-container .cart-item .fa-times:hover{
+    color: var(--main-color);
+}
+
+
