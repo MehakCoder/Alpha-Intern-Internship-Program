@@ -1,23 +1,59 @@
-const targetDate = new Date('YYYY-MM-DDTHH:MM:SS'); // Set your target
+// Getting formated date from date string
+let deadline = new Date(
+  "April 10, 2024 15:37:25"
+).getTime();
 
-function updateCountdown() {
-  const currentTime = new Date();
-  const difference = targetDate - currentTime;
+// Calling defined function at certain interval
+let x = setInterval(function () {
 
-  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  // Getting current date and time in required format
+  let now = new Date().getTime();
 
-  document.getElementById("days").innerText = days;
-  document.getElementById("hours").innerText = hours;
-  document.getElementById("minutes").innerText = minutes;
-  document.getElementById("seconds").innerText = seconds;
+  // Calculating difference
+  let t = deadline - now;
 
-  if (difference < 0) {
-      clearInterval(interval);
-      document.getElementById("timer").innerText = "The event has started!";
+  // Getting values of days,hours,minutes, seconds
+  let days = Math.floor(
+      t / (1000 * 60 * 60 * 24)
+  );
+  let hours = Math.floor(
+      (t % (1000 * 60 * 60 * 24)) /
+          (1000 * 60 * 60)
+  );
+  let minutes = Math.floor(
+      (t % (1000 * 60 * 60)) / (1000 * 60)
+  );
+  let seconds = Math.floor(
+      (t % (1000 * 60)) / 1000
+  );
+
+  // Show the output time
+  document.getElementById("days")
+          .innerHTML = days;
+  document.getElementById("hour")
+          .innerHTML = hours;
+  document.getElementById("minute")
+          .innerHTML = minutes;
+  document.getElementById("second")
+          .innerHTML = seconds;
+
+  // Show overtime output
+  if (t < 0) {
+      clearInterval(x);
+      document.getElementById(
+          "demo"
+      ).innerHTML = "TIME UP";
+      document.getElementById(
+          "day"
+      ).innerHTML = "0";
+      document.getElementById(
+          "hour"
+      ).innerHTML = "0";
+      document.getElementById(
+          "minute"
+      ).innerHTML = "0";
+      document.getElementById(
+          "second"
+      ).innerHTML = "0";
   }
-}
-
-const interval = setInterval(updateCountdown, 1000);
+}, 1000);

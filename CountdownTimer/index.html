@@ -9,19 +9,31 @@
 </head>
 
 <body>
-    <div id="countdown">
-        <p id="timer">
-            <span id="days"></span>
-            <span class="timer-unit">Days</span>
-            <span id="hours"></span>
-            <span class="timer-unit">Hours</span>
-            <span id="minutes"></span>
-            <span class="timer-unit">Minutes</span>
-            <span id="seconds"></span>
-            <span class="timer-unit">Seconds</span>
-        </p>
+    <h1>Countdown Clock</h1>
+    <div id="clockdiv">
+        <div>
+            <!--Show No. of days-->
+            <span class="days" id="days"></span>
+            <div class="smalltext">Days</div>
+        </div>
+        <div>
+            <!--Shows no. of hours-->
+            <span class="hours" id="hour"></span>
+            <div class="smalltext">Hours</div>
+        </div>
+        <div>
+            <!--Show no.of minutes-->
+            <span class="minutes" id="minute"></span>
+            <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+            <!--Show seconds-->
+            <span class="seconds" id="second"></span>
+            <div class="smalltext">Seconds</div>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <p id="demo"></p>
+    <script src="main.js"></script>
 </body>
 
 </html>

@@ -1,41 +1,40 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: linear-gradient(135deg, #6dd5ed, #2193b0);
-    color: white;
-  }
-  
-  #countdown {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 40px 60px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    text-align: center;
-  }
-  
+  text-align: center;
+  background: #00ecb9;
+  font-family: sans-serif;
+  font-weight: 100;
+}
 
-  #timer {
-    font-size: 3rem;
-    letter-spacing: 3px;
-  }
-  
-  .timer-unit {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 10px;
-    display: inline;
-  }
+/* Styling for heading */
+h1 {
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+#clockdiv {
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+#clockdiv > div {
+  padding: 10px;
+  border-radius: 3px;
+  background: #00bf96;
+  display: inline-block;
+}
+#clockdiv div > span {
+  padding: 15px;
+  border-radius: 3px;
+  background: #00816a;
+  display: inline-block;
+}
 
-@media (max-width: 600px){
-    #timer{
-        font-size: 2rem;
-    }
-    .timer-unit{
-        font-size: 1rem;
-    }
+/* Style for visible text */
+.smalltext {
+  padding-top: 5px;
+  font-size: 16px;
 }
