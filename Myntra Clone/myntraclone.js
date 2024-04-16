@@ -4,7 +4,7 @@ const kids_section = document.querySelector('.kids');
 const home_section = document.querySelector('.homeliving');
 const beauty_section = document.querySelector('.beauty');
 
-const men_section_items = document.querySelector('.men-section-item');
+const men_section_items = document.querySelector('.men-section-items');
 const women_section_items = document.querySelector('.women-section-items');
 const kids_section_items = document.querySelector('.kids-section-items');
 const home_section_items = document.querySelector('.home-section-items');
@@ -14,10 +14,10 @@ const container_ele = document.querySelector('.container');
 var bodyele = document.getElementsByTagName("BODY");
 
 men_section.onmouseover = () => {
-    men_section_item.classList.remove('visibility');
+    men_section_items.classList.remove('visibility');
 }
 men_section.onmouseout = () => {
-    men_section_item.classList.add('visibility');
+    men_section_items.classList.add('visibility');
 } /* men section ends here */
 
 women_section.onmouseover = () => {
